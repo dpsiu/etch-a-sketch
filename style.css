@@ -39,16 +39,16 @@ button {
     margin: 0px 10px;
 }
 
-.black {
+#black {
     background-color: #4b4b4b;
     color: white;
 }
 
-.rainbow {
+#rainbow {
     background: linear-gradient(to right, #ff4b4b, #ff9600, #58cc02, #2b70c9, #ce82ff);
 }
 
-.clear {
+#clear {
     background-color: #f49000;
 }
 
