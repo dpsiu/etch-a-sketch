@@ -11,7 +11,17 @@ body {
     padding: 24px;
 }
 
-.footer {
+a {
+    color: #f7f7f7;
+}
+a:hover {
+    transition-duration: .5s;
+    color: #4b4b4b;
+}
+
+
+
+.footer, .socials {
     font-size: 24px;
     color: #ffffff;
     font-weight: bold;
@@ -37,6 +47,10 @@ button {
     border: 6px white solid;
     border-radius: 10px;
     margin: 0px 10px;
+}
+
+#colorPicker {
+    background-color: #777777;
 }
 
 #black {
