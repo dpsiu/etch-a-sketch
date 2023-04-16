@@ -18,6 +18,18 @@ clearBtn.addEventListener("click", function (){
     clearGrid();
 });
 
+//Changes pen (hover color) to black
+let blackBtn = document.querySelector('#black');
+blackBtn.addEventListener("click", function (){
+    blackPen();
+});
+
+
+let rainbowBtn = document.querySelector('#rainbow');
+rainbowBtn.addEventListener("click", function (){
+    rainbowPen();
+});
+
 
 //Applies grid methods to create grid
 function createGrid(size){
@@ -32,7 +44,7 @@ function createGrid(size){
         div.classList.add("gridCell");
         div.style.backgroundColor = "#f7f7f7";
         div.addEventListener("mouseover", function () {
-            div.style.backgroundColor = "black";
+            div.style.backgroundColor = "#4b4b4b";
         });
         grid.insertAdjacentElement("beforeend", div);
     }
@@ -52,8 +64,6 @@ function getSize(){
         alert("Please enter a number less than 100.");
     }
     else {
-        div.style.backgroundColor = "white";
-        console.log("hasfhjik");
         return size;
     }
 }
@@ -65,16 +75,32 @@ function clearGrid(){
     });
 }
 
+function blackPen(){
+    const divs = document.querySelectorAll(".gridCell");
+    divs.forEach(divs => {
+        divs.addEventListener("mouseover", function () {
+            divs.style.backgroundColor = "#4b4b4b";
+        });
+    });
+}
 
-//Clears board, resets grid/divCell styles
-//New Grid OR Clear is clicked
-//change div background style to white
 
-//Start with clear first. Has an individual function, unlike new grid which must create a new grid and clear the old one. WHen it creates, can it creates with a color?
-//createGrid(42); creates 42 x 42 divs, each starting out white with a black colored mouse over effect. createGrid alrdy creates grid and adds color with hover property
-//This is the key to create Grid?
-//Clear button
-//Turns all divs background color to Polar.
-//When Clear is pressed
-//Target all dics within grid, or grid itself
-//change all style to background color Polar
+function rainbowPen(){
+    const divs = document.querySelectorAll(".gridCell");
+    divs.forEach(divs => {
+        divs.addEventListener("mouseover", function () {
+            getRandomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+            divs.style.backgroundColor = getRandomColor;
+        });
+    });
+}
+
+
+/*
+function getRandomColor(colorOptions){
+    return colorOptions[Math.floor(Math.random() * colorOptions.length)];
+}
+
+let colorOptions = ['#58cc02', '#89e219', '#1cb0f6', '#ff4b4b', '#ffc800', '#ff9600', '#ce82ff', '#2b70c9'];
+
+*/
