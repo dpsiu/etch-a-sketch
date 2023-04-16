@@ -52,6 +52,7 @@ button {
     background-color: #f49000;
 }
 
+
 #grid {
     display: grid;
     width: 960px;
@@ -60,3 +61,4 @@ button {
     border-radius: 10px;
     background-color: #f7f7f7;
 }
+
